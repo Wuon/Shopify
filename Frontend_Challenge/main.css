@@ -1,0 +1,142 @@
+body {
+    background-color: #000639;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: #ffffff;
+} 
+
+h1 {
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+
+h2{
+	font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+
+h3 {
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 15.4px;
+}
+
+p, a {
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 19.99px;
+}
+
+blockquote {
+	font-size: 21px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 29.99px;
+}
+
+pre {
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 18.57px;
+}
+
+.container{
+	text-align: center;
+	justify-content: center;
+	width: 65%;
+	margin: auto;
+}
+
+.inputContainer{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.title{
+	text-align: left;
+	font-weight: 700;
+	margin-top: 10%;
+	line-height: 1.5em;
+}
+
+.line{
+    width:2em;
+    height:0.2em;
+    background:#7AB55C;
+}
+
+.text{
+	margin-top: 3em;
+	text-align: left;
+}
+
+.emailInput{
+	max-width: 100%;
+	margin-top: 1em;
+	margin-right:0.5em;
+	flex-grow: 7;
+	border-radius: 10px;
+	border: none;
+	padding: 20px;
+}
+
+.interestDropdown{
+	max-width: 100%;
+	margin-top: 1em;
+	flex: 3;
+	border-radius: 10px;
+	border: none;
+	padding: 20px;
+}
+
+.errorMessage{
+	text-align: left;
+	color: #C23628;
+	visibility: hidden;
+}
+
+.signupButton{
+	width: 100%;
+	background-color: #5c6ac4;
+	color: white;
+	border-radius: 10px;
+	border: none;
+	padding: 20px;
+	font-weight: 700;
+	margin-top: 1em;
+	cursor: pointer !important;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.signupButton:hover{
+	background-color: #6A78C7;
+}
+
+.unsubscribe{
+	color: #ffffff;
+}
+
+footer{
+	bottom : 2px;  
+    height : 40px;  
+    margin-top : 40px;  
+    text-align: center;  
+    vertical-align: middle; 
+    position:fixed;
+    width:100%;
+}
