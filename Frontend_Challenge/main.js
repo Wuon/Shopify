@@ -1,4 +1,5 @@
-function myFunction() { 
+
+function submit() { 
 	if (emailAddress.value == null || emailAddress.value == "" || document.getElementById("interestDropdown").options.selectedIndex == 0){
 		document.getElementById("errorMessage").textContent = "Please fill out the required fields"; 
 		document.getElementById("errorMessage").style.visibility = "visible"; 
