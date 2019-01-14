@@ -32,7 +32,7 @@ router.get('/', (req, res) => {
       res.status(200).json(response);
     })
     .catch((err) => {
-      winston.error('500 POST /products', { error: err.toString(), stack: err.stack }, req.winstonObject);
+      winston.error('500 GET /products', { error: err.toString(), stack: err.stack }, req.winstonObject);
       res.status(500).json(err);
     });
 });
@@ -64,7 +64,7 @@ router.get('/:id', (req, res) => {
       }
     })
     .catch((err) => {
-      winston.error('500 POST /products', { error: err.toString(), stack: err.stack }, req.winstonObject);
+      winston.error(`500 GET /products/${req.params.id}`, { error: err.toString(), stack: err.stack }, req.winstonObject);
       res.status(500).json(err);
     });
 });

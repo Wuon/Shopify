@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use('/products', require('./controllers/products'));
+app.use('/checkout', require('./controllers/checkout'));
 
 // Health check
 app.get('/ping', (req, res) => {
