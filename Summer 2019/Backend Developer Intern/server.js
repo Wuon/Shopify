@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const passport = require('passport');
-const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 const path = require('path');
 

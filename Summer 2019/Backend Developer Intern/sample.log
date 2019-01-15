@@ -1,0 +1,48 @@
+{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
+{"sessionId":1,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"begin validateCart","body":{"cart":[{"id":"1","quantity":1}]},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"end validateCart","body":{"response":false},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"422 POST /checkout","body":{"error":"some item(s) either do not exist, or do not have the required inventory to process the request"},"origin":"API","user":"cusadmin"}
+{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
+{"sessionId":1,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"begin validateCart","body":{"cart":[{"id":"1","quantity":1}]},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"end validateCart","body":{"response":false},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"422 POST /checkout","body":{"error":"some item(s) either do not exist, or do not have the required inventory to process the request"},"origin":"API","user":"cusadmin"}
+{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
+{"sessionId":1,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"begin validateCart","body":{"cart":[{"id":"1","quantity":1}]},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"end validateCart","body":{"response":false},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"422 POST /checkout","body":{"error":"some item(s) either do not exist, or do not have the required inventory to process the request"},"origin":"API","user":"cusadmin"}
+{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
+{"sessionId":1,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"begin validateCart","body":{"cart":{"total":1.99,"cart":[{"id":"1","quantity":1}]}},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"end validateCart","body":{"response":false},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"422 POST /checkout","body":{"error":"some item(s) either do not exist, or do not have the required inventory to process the request"},"origin":"API","user":"cusadmin"}
+{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
+{"sessionId":1,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"begin validateCart","body":{"req":{"total":1.99,"cart":[{"id":"1","quantity":1}]}},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"error","message":"500 POST /checkout","body":{"error":"ReferenceError: cart is not defined","stack":"ReferenceError: cart is not defined\n    at Promise.all.then (/Users/dwu/Documents/Shopify Challenges/Summer 2019/Backend Developer Intern/services/products.js:46:36)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"},"origin":"API","user":"cusadmin"}
+{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
+{"sessionId":1,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"begin validateCart","body":{"req":{"total":1.98,"cart":[{"id":"1","quantity":1}]}},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"end validateCart","body":{"response":false},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"422 POST /checkout","body":{"error":"some item(s) either do not exist, or do not have the required inventory to process the request"},"origin":"API","user":"cusadmin"}
+{"message":"Starting session 2","body":{},"id":2,"user":"SYSTEM","level":"info"}
+{"sessionId":2,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
+{"sessionId":2,"level":"info","message":"begin validateCart","body":{"req":{"total":1.98,"cart":[{"id":"1","quantity":1}]}},"origin":"API","user":"cusadmin"}
+{"sessionId":2,"level":"info","message":"end validateCart","body":{"response":false},"origin":"API","user":"cusadmin"}
+{"sessionId":2,"level":"info","message":"422 POST /checkout","body":{"error":"some item(s) either do not exist, or do not have the required inventory to process the request"},"origin":"API","user":"cusadmin"}
+{"message":"Starting session 3","body":{},"id":3,"user":"SYSTEM","level":"info"}
+{"sessionId":3,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
+{"sessionId":3,"level":"info","message":"begin validateCart","body":{"req":{"total":1.99,"cart":[{"id":"1","quantity":1}]}},"origin":"API","user":"cusadmin"}
+{"sessionId":3,"level":"info","message":"end validateCart","body":{"response":true},"origin":"API","user":"cusadmin"}
+{"sessionId":3,"level":"info","message":"begin purchase","body":{"cart":[{"id":"1","quantity":1}]},"origin":"API","user":"cusadmin"}
+{"sessionId":3,"level":"info","message":"end purchase","body":{"response":true},"origin":"API","user":"cusadmin"}
+{"sessionId":3,"level":"info","message":"200 POST /checkout","body":{},"origin":"API","user":"cusadmin"}
+{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
+{"sessionId":1,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"begin validateCart","body":{"req":{"total":1.99,"cart":[{"id":"1","quantity":1}]}},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"end validateCart","body":{"response":true},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"begin purchase","body":{"cart":[{"id":"1","quantity":1}]},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"end purchase","body":{"response":true},"origin":"API","user":"cusadmin"}
+{"sessionId":1,"level":"info","message":"200 POST /checkout","body":{},"origin":"API","user":"cusadmin"}

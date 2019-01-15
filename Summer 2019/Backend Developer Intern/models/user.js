@@ -10,7 +10,7 @@ const UserSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
-  }
+  },
 });
 
 UserSchema.pre('save', async function hash(next) {
