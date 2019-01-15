@@ -22,7 +22,7 @@ module.exports.validateCart = (cart) => {
     promises.push(
       module.exports.findOne(cart[i].id).then(item => ((item) ? {
         id: cart[i].id,
-        isAllowed: item.inventory_count - cart[i].quantity >= 0,
+        isAllowed: !(cart[i].quantity <= 0 || item.inventory_count - cart[i].quantity < 0),
       } : {
         id: cart[i].id,
         isAllowed: false,
