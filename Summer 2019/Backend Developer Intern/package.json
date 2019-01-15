@@ -4,7 +4,7 @@
   "main": "server.js",
   "scripts": {
     "lint": "eslint",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "apidoc": "^0.17.7",

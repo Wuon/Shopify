@@ -1,11 +1,11 @@
 const mongodb = require('mongodb');
 
 const loadProductsCollection = () => mongodb.MongoClient.connect(
-  'mongodb://127.0.0.1:27017',
+  process.env.MONGODB_URI,
   {
     useNewUrlParser: true,
   },
-).then(client => client.db('test').collection('products'));
+).then(client => client.db(process.env.MONGODB_USER).collection('products'));
 
 module.exports.find = () => loadProductsCollection()
   .then(products => products.find({}).toArray().then(query => query));
