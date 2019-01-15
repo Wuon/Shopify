@@ -5,23 +5,52 @@ const winston = require('../services/winston');
 const router = express.Router();
 
 /**
- * @api {get} /products Fetch all products, or all products in stock
+ * @api {post} /checkout Purchase item(s)
  * @apiExample {js} Example usage with axios:
- *     axios.get(`${BASE_URI}/products`);
- *     axios.get(`${BASE_URI}/products`, {
- *       params: {
- *         inStock: 'true',
- *       },
+ *     axios.post(`${BASE_URI}/checkout`, {
+ *       cart: [ {
+ *         id: "1",
+ *         quantity: "1",
+ *       }, {
+ *         id: "2",
+ *         quantity: "2",
+ *       }, {
+ *         id: "3",
+ *         quantity: "3",
+ *       }]
  *     });
- * @apiName /products
+ * @apiParamExample {json} Request-Example:
+ *       cart: [ {
+ *         id: "1",
+ *         quantity: "1",
+ *       }, {
+ *         id: "2",
+ *         quantity: "2",
+ *       }, {
+ *         id: "3",
+ *         quantity: "3",
+ *       }]
+ *     }
+ * @apiName /checkout
  * @apiGroup products
  *
- * @apiParam {String} inStock if true, returns all products in stock
+ * @apiParam {Object[]} cart array of items to purchase
+ * @apiParam {String} id product's unique identifier
+ * @apiParam {String} quantity amount
  *
+ * @apiSuccess {Boolean} isSuccess response
  * @apiSuccessExample Success-Response:
- *    [
+ *    {
+ *      isSuccess: true,
+ *    }
  *
- *    ]
+ * @apiError {Boolean} isSuccess response
+ * @apiError {String} error message
+ * @apiErrorExample Success-Response:
+ *    {
+ *      isSuccess: false,
+ *      error: 'some item(s) either do not exist, or do not have the required inventory to process the request',
+ *    }
  *
  */
 router.post('/', (req, res) => {
@@ -33,19 +62,24 @@ router.post('/', (req, res) => {
           if (Object.keys(response)
             .filter(i => !response[i].isAllowed)
             .map(Number).length === 0) {
-            winston.info('200 POST /checkout', response, req.winstonObject);
-            res.status(200).json({
-              isSuccess: true,
-              cart: response,
+            products.purchase(req.body.cart).then(() => {
+              winston.info('200 POST /checkout', {}, req.winstonObject);
+              res.status(200).json({
+                isSuccess: true,
+              });
+            }).catch((error) => {
+              winston.error('500 POST /checkout', { error: error.toString(), stack: error.stack }, req.winstonObject);
+              res.status(500).json({
+                isSuccess: false,
+                error: error.toString(),
+              });
             });
           } else {
             winston.info('422 POST /checkout', {
-              cart: response,
               error: 'some item(s) either do not exist, or do not have the required inventory to process the request',
             }, req.winstonObject);
             res.status(422).json({
               isSuccess: false,
-              cart: response,
               error: 'some item(s) either do not exist, or do not have the required inventory to process the request',
             });
           }

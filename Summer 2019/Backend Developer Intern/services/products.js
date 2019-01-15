@@ -31,3 +31,15 @@ module.exports.validateCart = (cart) => {
   }
   return Promise.all(promises);
 };
+
+module.exports.purchase = (cart) => {
+  const promises = [];
+  for (let i = 0; i < cart.length; i += 1) {
+    promises.push(
+      loadProductsCollection()
+        .then(products => products.findOneAndUpdate({ _id: cart[i].id },
+          { $inc: { inventory_count: -cart[i].quantity } })),
+    );
+  }
+  return Promise.all(promises);
+};
