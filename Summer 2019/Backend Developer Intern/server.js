@@ -5,13 +5,14 @@ const dotenv = require('dotenv');
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
+const path = require('path');
 
-mongoose.connect(`${process.env.MONGODB_URI}`, { useNewUrlParser: true });
+dotenv.config();
+
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 mongoose.connection.on('error', error => console.log(error));
 
 require('./services/auth');
-
-dotenv.config();
 
 const app = express();
 
@@ -23,6 +24,8 @@ app.use('/', require('./controllers/auth'));
 app.use('/products', require('./controllers/products'));
 app.use('/checkout', passport.authenticate('jwt', { session: false }), require('./controllers/checkout'));
 
+// documentation
+app.use('/documentation', express.static(path.join(__dirname, 'doc')));
 
 // Health check
 app.get('/ping', (req, res) => {
