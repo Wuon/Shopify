@@ -31,7 +31,7 @@ about refreshing the token. If this was in production, I would use access and re
 The only route needed for authentication is:<br/>
 `https://shopify-backend-summer-2019.herokuapp.com/checkout`
 
-The authenticate, please add an authorization header with a bearer token.
+To authenticate, please add an authorization header with a bearer token.
 
 ### Logging
 A sample of logging output is shown below for the route `/products/:id`

@@ -19,6 +19,7 @@ const router = express.Router();
  * @apiParam {String} inStock if true, returns all products in stock
  *
  * @apiSuccess {Boolean} isSuccess response
+ * @apiSuccess {Object[]} products information on the requested products
  * @apiSuccessExample Success-Response:
  *    {
  *      isSuccess: true,
@@ -77,10 +78,26 @@ router.get('/', (req, res) => {
  *
  * @apiParam {String} id the product's unique identifier
  *
+ * @apiSuccess {Boolean} isSuccess response
+ * @apiSuccess {Object} product information on the requested product
  * @apiSuccessExample Success-Response:
- *    [
+ *    {
+ *      isSuccess: true,
+ *      product: {
+ *        _id: '1',
+ *        title: 'a',
+ *        price: 1.99,
+ *        inventory_count: 100
+ *      }
+ *    }
  *
- *    ]
+ * @apiError {Boolean} isSuccess response
+ * @apiError {String} error message
+ * @apiErrorExample Success-Response:
+ *    {
+ *      isSuccess: false,
+ *      error: 'an unexpected error has occurred',
+ *    }
  *
  */
 router.get('/:id', (req, res) => {
