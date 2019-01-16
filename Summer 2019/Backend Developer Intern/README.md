@@ -8,11 +8,15 @@ You can interact with the API here:
 https://shopify-backend-summer-2019.herokuapp.com
 ```
 
-and view the documentation here:
+and view the documentation here:<br/>
 https://shopify-backend-summer-2019.herokuapp.com/documentation
 
+I highly recommend taking a look at the documentation. I have provided lots of
+detail and instructions for consuming this API.
+
 To authenticate, please use the credentials provided and send a post request
-with the following body to `https://shopify-backend-summer-2019.herokuapp.com/login`:
+with the following body to:<br/>
+`https://shopify-backend-summer-2019.herokuapp.com/login`:
 
 ```
 {
@@ -22,7 +26,12 @@ with the following body to `https://shopify-backend-summer-2019.herokuapp.com/lo
 ```
 
 The lifespan of the token is set to 1 day, so there is no need to worry
-about refreshing the token. If this was in, I would use access and refresh tokens.
+about refreshing the token. If this was in production, I would use access and refresh tokens.
+
+The only route needed for authentication is:<br/>
+`https://shopify-backend-summer-2019.herokuapp.com/checkout`
+
+The authenticate, please add an authorization header with a bearer token.
 
 ### Logging
 A sample of logging output is shown below for the route `/products/:id`
@@ -65,7 +74,7 @@ logging providers like kibana and cloudwatch for up-to-date security issues.
 {"sessionId":1,"level":"error","message":"500 POST /checkout","body":{"error":"ReferenceError: cart is not defined","stack":"ReferenceError: cart is not defined\n    at Promise.all.then (/Users/dwu/Documents/Shopify Challenges/Summer 2019/Backend Developer Intern/services/products.js:46:36)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"},"origin":"API","user":"cusadmin"}
 ```
 
-The stack is provided and the user (if available is provided) for debugging.
+The stack is provided and the user (if available) is provided for debugging.
 
 ### Design
 
@@ -91,10 +100,10 @@ not give back a product of id 2, isSuccess will always be false.
 This method is used to make lives easier for the frontend, where consumers are guaranteed on the result.
 
 ### Remarks
-If there are any other questions, feel free to email me at:
+If there are any other questions, feel free to email me at:<br/>
 wuon@protonmail.com
 
-With love and passion,
+With love and passion,<br/>
 Daniel Wu
 
 
