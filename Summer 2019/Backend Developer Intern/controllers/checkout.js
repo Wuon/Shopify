@@ -25,6 +25,8 @@ const router = express.Router();
  *         }
  *       });
  * @apiParamExample {json} Request-Example:
+ *     {
+ *       total: 19.94
  *       cart: [ {
  *         id: "1",
  *         quantity: "1",
@@ -64,7 +66,7 @@ router.post('/', (req, res) => {
     id: winston.getSessionId(),
   };
   winston.info('begin POST /checkout', req.body, winstonObject);
-  if (req.body.cart) {
+  if (req.body.cart && req.body.total) {
     const set = new Set();
     if (!req.body.cart.some(obj => set.size === set.add(obj.id).size)) {
       products.validateCart(req.body, winstonObject)
@@ -110,7 +112,7 @@ router.post('/', (req, res) => {
     winston.info('422 POST /checkout', { error: 'cart parameter missing' }, winstonObject);
     res.status(422).json({
       isSuccess: false,
-      error: 'missing parameters: cart',
+      error: 'missing parameters: cart, total',
     });
   }
 });

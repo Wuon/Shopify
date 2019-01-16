@@ -44,7 +44,7 @@ module.exports.validateCart = (req, winstonObject) => {
   const promises = [];
   for (let i = 0; i < req.cart.length; i += 1) {
     promises.push(
-      module.exports.findOne(req.cart[i].id)
+      module.exports.findOne(req.cart[i].id, winstonObject)
         .then((item) => {
           if (item) {
             total += item.price * req.cart[i].quantity;
