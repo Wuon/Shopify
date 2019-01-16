@@ -8,14 +8,35 @@ const loadProductsCollection = () => mongodb.MongoClient.connect(
   },
 ).then(client => client.db(process.env.MONGODB_USER).collection('products'));
 
-module.exports.find = () => loadProductsCollection()
-  .then(products => products.find({}).toArray().then(query => query));
+module.exports.find = (winstonObject) => {
+  winston.info('begin products.find', {}, winstonObject);
+  return loadProductsCollection()
+    .then(products => products.find({}).toArray().then((query) => {
+      winston.info('end products.find', { query }, winstonObject);
+      return query;
+    }));
+};
 
-module.exports.findOne = _id => loadProductsCollection()
-  .then(products => products.find({ _id }).toArray().then(query => query[0]));
+module.exports.findOne = (_id, winstonObject) => {
+  winston.info('begin products.findOne', { _id }, winstonObject);
+  return loadProductsCollection()
+    .then(products => products.find({ _id }).toArray().then((query) => {
+      winston.info('end products.findOne', { query }, winstonObject);
+      return query[0];
+    }));
+};
 
-module.exports.findInStock = () => loadProductsCollection()
-  .then(products => products.find({ inventory_count: { $gt: 0 } }).toArray().then(query => query));
+module.exports.findInStock = (winstonObject) => {
+  winston.info('begin products.findInStock', {}, winstonObject);
+  return loadProductsCollection()
+    .then(products => products.find({ inventory_count: { $gt: 0 } }).toArray().then((query) => {
+      winston.info('end products.findInStock', { query }, winstonObject);
+      return query;
+    }))
+    .catch((err) => {
+      winston.error('error products.findInStock', { error: err.toString(), stack: err.stack }, winstonObject);
+    });
+};
 
 module.exports.validateCart = (req, winstonObject) => {
   winston.info('begin validateCart', { req }, winstonObject);

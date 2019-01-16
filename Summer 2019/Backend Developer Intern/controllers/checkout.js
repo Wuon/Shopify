@@ -63,7 +63,7 @@ router.post('/', (req, res) => {
     user: req.user.username,
     id: winston.getSessionId(),
   };
-  winston.info('begin POST /checkout', {}, winstonObject);
+  winston.info('begin POST /checkout', req.body, winstonObject);
   if (req.body.cart) {
     const set = new Set();
     if (!req.body.cart.some(obj => set.size === set.add(obj.id).size)) {
