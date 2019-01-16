@@ -42,7 +42,7 @@ passport.use(new JWTstrategy({
 }, async (token, done) => {
   try {
     if (moment().isAfter(token.user.expiresIn)) {
-      return done(new Error('token expired'));
+      return done(null, false, { message: 'token is expired' });
     }
     return done(null, token.user);
   } catch (error) {

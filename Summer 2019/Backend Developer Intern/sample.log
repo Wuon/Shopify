@@ -1,137 +1,34 @@
 {"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"begin validateCart","body":{"cart":[{"id":"1","quantity":1}]},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"end validateCart","body":{"response":false},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"422 POST /checkout","body":{"error":"some item(s) either do not exist, or do not have the required inventory to process the request"},"origin":"API","user":"cusadmin"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"begin validateCart","body":{"cart":[{"id":"1","quantity":1}]},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"end validateCart","body":{"response":false},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"422 POST /checkout","body":{"error":"some item(s) either do not exist, or do not have the required inventory to process the request"},"origin":"API","user":"cusadmin"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"begin validateCart","body":{"cart":[{"id":"1","quantity":1}]},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"end validateCart","body":{"response":false},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"422 POST /checkout","body":{"error":"some item(s) either do not exist, or do not have the required inventory to process the request"},"origin":"API","user":"cusadmin"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"begin validateCart","body":{"cart":{"total":1.99,"cart":[{"id":"1","quantity":1}]}},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"end validateCart","body":{"response":false},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"422 POST /checkout","body":{"error":"some item(s) either do not exist, or do not have the required inventory to process the request"},"origin":"API","user":"cusadmin"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"begin validateCart","body":{"req":{"total":1.99,"cart":[{"id":"1","quantity":1}]}},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"error","message":"500 POST /checkout","body":{"error":"ReferenceError: cart is not defined","stack":"ReferenceError: cart is not defined\n    at Promise.all.then (/Users/dwu/Documents/Shopify Challenges/Summer 2019/Backend Developer Intern/services/products.js:46:36)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"},"origin":"API","user":"cusadmin"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"begin validateCart","body":{"req":{"total":1.98,"cart":[{"id":"1","quantity":1}]}},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"end validateCart","body":{"response":false},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"422 POST /checkout","body":{"error":"some item(s) either do not exist, or do not have the required inventory to process the request"},"origin":"API","user":"cusadmin"}
-{"message":"Starting session 2","body":{},"id":2,"user":"SYSTEM","level":"info"}
-{"sessionId":2,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
-{"sessionId":2,"level":"info","message":"begin validateCart","body":{"req":{"total":1.98,"cart":[{"id":"1","quantity":1}]}},"origin":"API","user":"cusadmin"}
-{"sessionId":2,"level":"info","message":"end validateCart","body":{"response":false},"origin":"API","user":"cusadmin"}
-{"sessionId":2,"level":"info","message":"422 POST /checkout","body":{"error":"some item(s) either do not exist, or do not have the required inventory to process the request"},"origin":"API","user":"cusadmin"}
-{"message":"Starting session 3","body":{},"id":3,"user":"SYSTEM","level":"info"}
-{"sessionId":3,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
-{"sessionId":3,"level":"info","message":"begin validateCart","body":{"req":{"total":1.99,"cart":[{"id":"1","quantity":1}]}},"origin":"API","user":"cusadmin"}
-{"sessionId":3,"level":"info","message":"end validateCart","body":{"response":true},"origin":"API","user":"cusadmin"}
-{"sessionId":3,"level":"info","message":"begin purchase","body":{"cart":[{"id":"1","quantity":1}]},"origin":"API","user":"cusadmin"}
-{"sessionId":3,"level":"info","message":"end purchase","body":{"response":true},"origin":"API","user":"cusadmin"}
-{"sessionId":3,"level":"info","message":"200 POST /checkout","body":{},"origin":"API","user":"cusadmin"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin POST /checkout","body":{},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"begin validateCart","body":{"req":{"total":1.99,"cart":[{"id":"1","quantity":1}]}},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"end validateCart","body":{"response":true},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"begin purchase","body":{"cart":[{"id":"1","quantity":1}]},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"end purchase","body":{"response":true},"origin":"API","user":"cusadmin"}
-{"sessionId":1,"level":"info","message":"200 POST /checkout","body":{},"origin":"API","user":"cusadmin"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"200 GET /products","body":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1},{"_id":"5","title":"e","price":5.99,"inventory_count":0}],"origin":"API","user":"Unknown user"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"200 GET /products","body":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1},{"_id":"5","title":"e","price":5.99,"inventory_count":0}],"origin":"API","user":"Unknown user"}
-{"message":"Starting session 2","body":{},"id":2,"user":"SYSTEM","level":"info"}
-{"sessionId":2,"level":"info","message":"begin findInStock","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":2,"level":"info","message":"200 GET /products","origin":"API","user":"Unknown user"}
-{"sessionId":2,"level":"info","message":"end findInStock","body":{"query":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1}]},"origin":"API","user":"Unknown user"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin GET /products","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"200 GET /products","body":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1},{"_id":"5","title":"e","price":5.99,"inventory_count":0}],"origin":"API","user":"Unknown user"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin GET /products","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"200 GET /products","body":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1},{"_id":"5","title":"e","price":5.99,"inventory_count":0}],"origin":"API","user":"Unknown user"}
-{"message":"Starting session 2","body":{},"id":2,"user":"SYSTEM","level":"info"}
-{"sessionId":2,"level":"info","message":"begin GET /products","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":2,"level":"info","message":"begin findInStock","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":2,"level":"info","message":"200 GET /products","origin":"API","user":"Unknown user"}
-{"sessionId":2,"level":"info","message":"end findInStock","body":{"query":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1}]},"origin":"API","user":"Unknown user"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin GET /products","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"begin findInStock","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"200 GET /products","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"end findInStock","body":{"query":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1}]},"origin":"API","user":"Unknown user"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin GET /products","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"begin findInStock","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"end findInStock","body":{"query":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1}]},"origin":"API","user":"Unknown user"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin GET /products","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"begin findInStock","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"begin GET /products","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"end findInStock","body":{"query":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1}]},"origin":"API","user":"Unknown user"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin GET /products","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"begin products.findInStock","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"end products.findInStock","body":{"query":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1}]},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"begin GET /products","body":{},"origin":"API","user":"Unknown user"}
-{"message":"Starting session 2","body":{},"id":2,"user":"SYSTEM","level":"info"}
-{"sessionId":2,"level":"info","message":"begin GET /products","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":2,"level":"info","message":"begin products.find","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":2,"level":"info","message":"end products.find","body":{"query":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1},{"_id":"5","title":"e","price":5.99,"inventory_count":0}]},"origin":"API","user":"Unknown user"}
-{"sessionId":2,"level":"info","message":"begin GET /products","body":{},"origin":"API","user":"Unknown user"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
 {"sessionId":1,"level":"info","message":"begin GET /products","body":{},"origin":"API","user":"Unknown user"}
 {"sessionId":1,"level":"info","message":"begin products.find","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"end products.find","body":{"query":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1},{"_id":"5","title":"e","price":5.99,"inventory_count":0}]},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"200 GET /products","body":{"response":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1},{"_id":"5","title":"e","price":5.99,"inventory_count":0}]},"origin":"API","user":"Unknown user"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin GET /products","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"begin products.find","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"end products.find","body":{"query":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1},{"_id":"5","title":"e","price":5.99,"inventory_count":0}]},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"200 GET /products","body":{"response":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1},{"_id":"5","title":"e","price":5.99,"inventory_count":0}]},"origin":"API","user":"Unknown user"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin GET /products","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"begin products.find","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"end products.find","body":{"query":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1},{"_id":"5","title":"e","price":5.99,"inventory_count":0}]},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"200 GET /products","body":{"products":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1},{"_id":"5","title":"e","price":5.99,"inventory_count":0}]},"origin":"API","user":"Unknown user"}
+{"sessionId":1,"level":"info","message":"end products.find","body":{"query":[{"_id":"1","title":"a","price":1.99,"inventory_count":95},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1},{"_id":"5","title":"e","price":5.99,"inventory_count":0}]},"origin":"API","user":"Unknown user"}
+{"sessionId":1,"level":"info","message":"200 GET /products","body":{"products":[{"_id":"1","title":"a","price":1.99,"inventory_count":95},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1},{"_id":"5","title":"e","price":5.99,"inventory_count":0}]},"origin":"API","user":"Unknown user"}
 {"message":"Starting session 2","body":{},"id":2,"user":"SYSTEM","level":"info"}
 {"sessionId":2,"level":"info","message":"begin GET /products","body":{},"origin":"API","user":"Unknown user"}
 {"sessionId":2,"level":"info","message":"begin products.findInStock","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":2,"level":"info","message":"end products.findInStock","body":{"query":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1}]},"origin":"API","user":"Unknown user"}
-{"sessionId":2,"level":"info","message":"200 GET /products","body":{"products":[{"_id":"1","title":"a","price":1.99,"inventory_count":98},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1}]},"origin":"API","user":"Unknown user"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin products.findOne","body":{"_id":"1"},"origin":"API","user":"Unknown user"}
-{"message":"Starting session 2","body":{},"id":2,"user":"SYSTEM","level":"info"}
-{"sessionId":2,"level":"info","message":"end products.findOne","body":{"query":[{"_id":"1","title":"a","price":1.99,"inventory_count":98}]},"origin":"API","user":"Unknown user"}
+{"sessionId":2,"level":"info","message":"end products.findInStock","body":{"query":[{"_id":"1","title":"a","price":1.99,"inventory_count":95},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1}]},"origin":"API","user":"Unknown user"}
+{"sessionId":2,"level":"info","message":"200 GET /products","body":{"products":[{"_id":"1","title":"a","price":1.99,"inventory_count":95},{"_id":"2","title":"b","price":2.99,"inventory_count":93},{"_id":"3","title":"c","price":3.99,"inventory_count":95},{"_id":"4","title":"d","price":4.99,"inventory_count":1}]},"origin":"API","user":"Unknown user"}
 {"message":"Starting session 3","body":{},"id":3,"user":"SYSTEM","level":"info"}
-{"sessionId":3,"level":"info","message":"200 GET /products/1","body":{"_id":"1","title":"a","price":1.99,"inventory_count":98},"origin":"API","user":"Unknown user"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin GET /products/1","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"begin products.findOne","body":{"_id":"1"},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"end products.findOne","body":{"query":[{"_id":"1","title":"a","price":1.99,"inventory_count":98}]},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"200 GET /products/1","body":{"product":{"_id":"1","title":"a","price":1.99,"inventory_count":98}},"origin":"API","user":"Unknown user"}
-{"message":"Starting session 2","body":{},"id":2,"user":"SYSTEM","level":"info"}
-{"sessionId":2,"level":"info","message":"begin GET /products/5","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":2,"level":"info","message":"begin products.findOne","body":{"_id":"5"},"origin":"API","user":"Unknown user"}
-{"sessionId":2,"level":"info","message":"end products.findOne","body":{"query":[{"_id":"5","title":"e","price":5.99,"inventory_count":0}]},"origin":"API","user":"Unknown user"}
-{"sessionId":2,"level":"info","message":"200 GET /products/5","body":{"product":{"_id":"5","title":"e","price":5.99,"inventory_count":0}},"origin":"API","user":"Unknown user"}
-{"message":"Starting session 3","body":{},"id":3,"user":"SYSTEM","level":"info"}
-{"sessionId":3,"level":"info","message":"begin GET /products/7","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":3,"level":"info","message":"begin products.findOne","body":{"_id":"7"},"origin":"API","user":"Unknown user"}
-{"sessionId":3,"level":"info","message":"end products.findOne","body":{"query":[]},"origin":"API","user":"Unknown user"}
-{"sessionId":3,"level":"info","message":"422 GET /products/7","body":{"error":"product not found"},"origin":"API","user":"Unknown user"}
-{"message":"Starting session 1","body":{},"id":1,"user":"SYSTEM","level":"info"}
-{"sessionId":1,"level":"info","message":"begin GET /products/2","body":{},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"begin products.findOne","body":{"_id":"2"},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"end products.findOne","body":{"query":[{"_id":"2","title":"b","price":2.99,"inventory_count":93}]},"origin":"API","user":"Unknown user"}
-{"sessionId":1,"level":"info","message":"200 GET /products/2","body":{"product":{"_id":"2","title":"b","price":2.99,"inventory_count":93}},"origin":"API","user":"Unknown user"}
+{"sessionId":3,"level":"info","message":"begin GET /products/4","body":{},"origin":"API","user":"Unknown user"}
+{"sessionId":3,"level":"info","message":"begin products.findOne","body":{"_id":"4"},"origin":"API","user":"Unknown user"}
+{"sessionId":3,"level":"info","message":"end products.findOne","body":{"query":[{"_id":"4","title":"d","price":4.99,"inventory_count":1}]},"origin":"API","user":"Unknown user"}
+{"sessionId":3,"level":"info","message":"200 GET /products/4","body":{"product":{"_id":"4","title":"d","price":4.99,"inventory_count":1}},"origin":"API","user":"Unknown user"}
+{"message":"Starting session 4","body":{},"id":4,"user":"SYSTEM","level":"info"}
+{"sessionId":4,"level":"info","message":"begin GET /products/55","body":{},"origin":"API","user":"Unknown user"}
+{"sessionId":4,"level":"info","message":"begin products.findOne","body":{"_id":"55"},"origin":"API","user":"Unknown user"}
+{"sessionId":4,"level":"info","message":"end products.findOne","body":{"query":[]},"origin":"API","user":"Unknown user"}
+{"sessionId":4,"level":"info","message":"422 GET /products/55","body":{"error":"product not found"},"origin":"API","user":"Unknown user"}
+{"message":"Starting session 5","body":{},"id":5,"user":"SYSTEM","level":"info"}
+{"sessionId":5,"level":"info","message":"begin POST /login","body":{},"origin":"API","user":"Unknown user"}
+{"sessionId":5,"level":"info","message":"200 POST /login","body":{},"origin":"API","user":"Unknown user"}
+{"message":"Starting session 6","body":{},"id":6,"user":"SYSTEM","level":"info"}
+{"sessionId":6,"level":"info","message":"begin POST /checkout","body":{"total":1.99,"cart":[{"id":"1","quantity":"1"}]},"origin":"API","user":"cusadmin"}
+{"sessionId":6,"level":"info","message":"begin validateCart","body":{"req":{"total":1.99,"cart":[{"id":"1","quantity":"1"}]}},"origin":"API","user":"cusadmin"}
+{"message":"Starting session 7","body":{},"id":7,"user":"SYSTEM","level":"info"}
+{"sessionId":7,"level":"info","message":"begin products.findOne","body":{"_id":"1"},"origin":"API","user":"Unknown user"}
+{"message":"Starting session 8","body":{},"id":8,"user":"SYSTEM","level":"info"}
+{"sessionId":8,"level":"info","message":"end products.findOne","body":{"query":[{"_id":"1","title":"a","price":1.99,"inventory_count":95}]},"origin":"API","user":"Unknown user"}
+{"sessionId":6,"level":"info","message":"end validateCart","body":{"response":true},"origin":"API","user":"cusadmin"}
+{"sessionId":6,"level":"info","message":"begin purchase","body":{"cart":[{"id":"1","quantity":"1"}]},"origin":"API","user":"cusadmin"}
+{"sessionId":6,"level":"info","message":"end purchase","body":{"response":true},"origin":"API","user":"cusadmin"}
+{"sessionId":6,"level":"info","message":"200 POST /checkout","body":{},"origin":"API","user":"cusadmin"}
