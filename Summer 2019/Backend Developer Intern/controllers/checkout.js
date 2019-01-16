@@ -9,6 +9,7 @@ const router = express.Router();
  * @apiPermission authenticated
  * @apiExample {js} Example usage with axios:
  *     axios.post(`${BASE_URI}/checkout`, {
+ *       total: 19.94,
  *       cart: [ {
  *         id: "1",
  *         quantity: "1",
@@ -26,7 +27,7 @@ const router = express.Router();
  *       });
  * @apiParamExample {json} Request-Example:
  *     {
- *       total: 19.94
+ *       total: 19.94,
  *       cart: [ {
  *         id: "1",
  *         quantity: "1",
