@@ -21,19 +21,22 @@ passport.use('login', new LocalStrategy({
   usernameField: 'username',
   passwordField: 'password',
 }, async (username, password, done) => {
-  try {
-    const user = await UserModel.findOne({ username });
-    if (!user) {
-      return done(null, false, { message: 'User not found' });
+  if (username && password) {
+    try {
+      const user = await UserModel.findOne({ username });
+      if (!user) {
+        return done(null, false, { message: 'user not found' });
+      }
+      const validate = await user.isValid(password);
+      if (!validate) {
+        return done(null, false, { message: 'wrong password' });
+      }
+      return done(null, user, { message: 'Logged in Successfully!' });
+    } catch (error) {
+      return done(error);
     }
-    const validate = await user.isValid(password);
-    if (!validate) {
-      return done(null, false, { message: 'Wrong Password' });
-    }
-    return done(null, user, { message: 'Logged in Successfully!' });
-  } catch (error) {
-    return done(error);
   }
+  return done(null, false, { message: 'missing parameters: username, password' });
 }));
 
 passport.use(new JWTstrategy({

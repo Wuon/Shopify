@@ -60,7 +60,7 @@ router.post('/login', async (req, res, next) => {
         winston.info('401 POST /login', {}, winstonObject);
         return res.status(401).json({
           isSuccess: false,
-          error: 'invalid credentials',
+          error: info.message,
         });
       }
       return req.login(user, { session: false }, async (error) => {
