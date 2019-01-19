@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <HeaderContainer></HeaderContainer>
     <router-view/>
   </div>
 </template>
@@ -8,8 +9,13 @@
   font-family: 'Product Sans', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: left;
   color: #222222;
-  padding: 100px;
 }
 </style>
+<script>
+import HeaderContainer from './components/organisms/HeaderContainer.vue';
+
+export default {
+  components: { HeaderContainer },
+};
+</script>

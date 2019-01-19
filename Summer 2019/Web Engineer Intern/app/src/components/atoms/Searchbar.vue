@@ -33,8 +33,8 @@ export default {
 
     font-family: 'Product Sans', sans-serif;
     font-size: 1rem;
-    max-width: 500px;
-    min-width: 500px;
+    max-width: 50px;
+    min-width: 50px;
     height: 50px;
     padding: 0 15px 0 45px;
 
@@ -43,19 +43,19 @@ export default {
     color: #222222;
 
     border-radius: 0;
-    border: solid 2px #222222;
+    border: solid 2px #ffffff;
 
     transition: all 100ms;
     -webkit-transition: all 100ms;
     -moz-transition: all 100ms;
     -ms-transition: all 100ms;
-
-    margin-bottom: 2.5rem;
   }
 
   input:focus {
     color: #222222 !important;
-    outline: 4px solid;
+    border: solid 2px #222222;
+    max-width: 300px;
+    min-width: 300px;
   }
 
   input:focus::placeholder{

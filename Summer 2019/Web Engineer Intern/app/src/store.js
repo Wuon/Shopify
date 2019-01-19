@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import _ from 'lodash';
 
 Vue.use(Vuex);
 
@@ -9,6 +10,7 @@ export default new Vuex.Store({
     keywords: [],
     items: [],
     filter: [],
+    star: [],
   },
   mutations: {
     setQuery(state, query) {
@@ -22,6 +24,15 @@ export default new Vuex.Store({
     },
     setFilter(state, filter) {
       state.filter = filter;
+    },
+    setStar(state, star) {
+      const set = new Set(state.star);
+      if (set.has(star)) {
+        set.delete(star);
+      } else {
+        set.add(star);
+      }
+      state.star = Array.from(set);
     },
   },
   actions: {

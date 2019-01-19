@@ -2,7 +2,8 @@
   <div class="grid">
     <Card
       v-for="(item) in filter"
-      :key="item.title"
+      :key="item.index"
+      :index="item.index"
       :title="item.title"
       :category="item.category"
       :body="item.body"

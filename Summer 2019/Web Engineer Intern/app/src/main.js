@@ -1,5 +1,6 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faSearch, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faTrash, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar as faEmptyStar } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import Vue from 'vue';
@@ -7,7 +8,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
-library.add(faSearch, faTrash);
+library.add(faSearch, faTrash, faStar, faEmptyStar);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
