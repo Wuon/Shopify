@@ -26,11 +26,21 @@ export default {
       url: 'https://secure.toronto.ca/cc_sr_v1/data/swm_waste_wizard_APR?limit=1000',
     }).then((res) => {
       const data = [];
+      /*
+        Add an ID to each item in the dataset. This will make it easier to keep track of which
+        items are favourites or not. Also, this will make it easier to filter out when
+        searching.
+      */
       _.forEach(res.data, (item, index) => {
         const temp = item;
         temp.index = index;
         data.push(temp);
       });
+      /*
+        Iterate through the objects to get searchable objects. We start off with getting the title,
+        then we move down and go through the keywords. This will generate a full list in a hash map
+        for fast access in the future.
+      */
       _.forEach(res.data, (item) => {
         keywords[item.title] = item.index;
         _.forEach(item.keywords.split(', '), (keyword) => {

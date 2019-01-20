@@ -45,6 +45,11 @@ export default {
       let filter = [];
       if (value !== '') {
         const set = new Set();
+        /*
+         Using a set to ensure there aren't any duplicates in the filtered set.
+         This is because in the keyword object, keywords points to the ID of the
+         dataset.
+        */
         _.forEach(store.state.keywords, (index, keyword) => {
           if (keyword.includes(value) && !set.has(index)) {
             filter.push(store.state.items[index]);
