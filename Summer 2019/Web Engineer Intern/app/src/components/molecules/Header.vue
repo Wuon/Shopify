@@ -3,7 +3,7 @@
     <div class="logoContainer">
       <RouterLink to="/">
         <a>
-          <img src="https://slackhq.com/wp-content/themes/babka/img/_rebrand/icons/icon_slack.svg" width="100" class="logo" alt="" scale="0">
+          <img src="../../assets/logo.png" width="100" class="logo" alt="" scale="0">
         </a>
       </RouterLink>
       <RouterLink to="/favourite">

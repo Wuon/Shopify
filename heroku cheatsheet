@@ -1,1 +1,5 @@
+heroku git:remote -a shopify-backend-summer-2019
 git subtree push --prefix Summer\ 2019/Backend\ Developer\ Intern heroku master
+
+heroku git:remote -a shopify-web-summer-2019
+git subtree push --prefix Summer\ 2019/Web\ Engineer\ Intern/app heroku master
