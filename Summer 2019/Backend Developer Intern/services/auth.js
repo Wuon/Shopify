@@ -5,6 +5,7 @@ const ExtractJWT = require('passport-jwt').ExtractJwt;
 const moment = require('moment');
 const UserModel = require('../models/user');
 
+// local strategy registration setup for username and password
 passport.use('signup', new LocalStrategy({
   usernameField: 'username',
   passwordField: 'password',
@@ -17,16 +18,21 @@ passport.use('signup', new LocalStrategy({
   }
 }));
 
+// login local strategy for token retrieval
 passport.use('login', new LocalStrategy({
   usernameField: 'username',
   passwordField: 'password',
 }, async (username, password, done) => {
+  // check for username and password
   if (username && password) {
     try {
+      // search for user in the database
       const user = await UserModel.findOne({ username });
+      // check for user
       if (!user) {
         return done(null, false, { message: 'user not found' });
       }
+      // validate password for desired user
       const validate = await user.isValid(password);
       if (!validate) {
         return done(null, false, { message: 'wrong password' });
@@ -39,11 +45,14 @@ passport.use('login', new LocalStrategy({
   return done(null, false, { message: 'missing parameters: username, password' });
 }));
 
+
+// Json web token strategy extracted from header of request
 passport.use(new JWTstrategy({
   secretOrKey: 'top_secret',
   jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
 }, async (token, done) => {
   try {
+    // check to see if the date written comes before current server time
     if (moment().isAfter(token.user.expiresIn)) {
       return done(null, false, { message: 'token is expired' });
     }

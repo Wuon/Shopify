@@ -1,5 +1,7 @@
 const winston = require('winston');
 
+
+// initialize winston logger with errors to error.log and other levels to sample.log
 const logger = winston.createLogger({
   transports: [
     new winston.transports.Console(),
@@ -8,8 +10,10 @@ const logger = winston.createLogger({
   ],
 });
 
+// start sessionId at 0 during server initialization
 let sessionId = 0;
 
+// sessionId tracker between every request
 module.exports.getSessionId = (user) => {
   sessionId += 1;
   if (logger) {
@@ -20,6 +24,7 @@ module.exports.getSessionId = (user) => {
   return sessionId;
 };
 
+// info level documentation
 module.exports.info = (message, body, obj = {}, origin = 'API') => {
   const logObject = {
     sessionId: obj.id || module.exports.getSessionId(),
@@ -34,6 +39,7 @@ module.exports.info = (message, body, obj = {}, origin = 'API') => {
   }
 };
 
+// error level documentation
 module.exports.error = (message, body, obj = {}, origin = 'API') => {
   const logObject = {
     sessionId: obj.id || module.exports.getSessionId(),

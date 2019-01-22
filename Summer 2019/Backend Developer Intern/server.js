@@ -19,8 +19,11 @@ const app = express();
 app.use(bodyParser.json({ extended: false }));
 app.use(cors());
 
+// open to public
 app.use('/', require('./controllers/auth'));
 app.use('/products', require('./controllers/products'));
+
+// authenticated routes
 app.use('/checkout', passport.authenticate('jwt', { session: false }), require('./controllers/checkout'));
 
 // documentation
